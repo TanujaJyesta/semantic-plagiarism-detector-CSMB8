@@ -15,4 +15,5 @@ plagiarism.db
 
 data/uploads/
 
-.DS_Storeresults/*.json
+.DS_Store
+results/*.json
