@@ -1,58 +1,59 @@
-# Explainable Semantic Plagiarism Detection
+# Explainable Semantic Plagiarism Detection with Internet Source Checking
 
-## 1. Project Overview
+## 📌 Project Overview
 
-Explainable Semantic Plagiarism Detection is an NLP-based system designed to detect plagiarism based on the **meaning of text**, rather than only exact word matching. The system aims to identify paraphrased and semantically similar content using **Sentence-BERT (SBERT)** and provide understandable evidence for the detected plagiarism.
+This project focuses on developing an explainable plagiarism detection system that can identify potentially reused content, including paraphrased text, and provide evidence of possible online sources.
 
-## 2. Objectives
+Traditional plagiarism detection methods mainly depend on lexical or exact word matching. Such methods can be less effective when the original content is paraphrased using different words while retaining the same meaning.
 
-* Detect semantic and paraphrased plagiarism.
-* Generate sentence embeddings using Sentence-BERT.
-* Calculate semantic similarity using cosine similarity.
-* Identify potentially plagiarized text and matching sentences.
-* Provide explanations for plagiarism decisions.
-* Evaluate the system using standard performance metrics.
+The proposed research combines lexical similarity and semantic similarity with Internet-source retrieval. The system retrieves potentially relevant web sources, compares the submitted document with the retrieved source content, and provides source-grounded evidence for potentially plagiarized passages.
 
-## 3. Proposed Methodology
+> The system identifies potential plagiarism for human verification. A similarity result is not treated as proof of academic misconduct.
 
-Input Documents
-      ↓
-Text Preprocessing
-      ↓
-Sentence Segmentation
-      ↓
-Sentence-BERT Embeddings
-      ↓
-Cosine Similarity
-      ↓
-Plagiarism Detection
-      ↓
-Explainable Results
+---
 
-The system will preprocess the input documents, generate sentence embeddings using SBERT, compare the embeddings using cosine similarity, and identify semantically similar content based on an experimentally determined threshold. The results will include similarity scores and matching sentences as evidence.
+## 🎯 Objectives
 
-## 4. Technology Stack
-  Language: Python
-  NLP: Sentence-BERT, Sentence Transformers
-  Similarity: Cosine Similarity
-  Efficient Search: FAISS (if required)
-  Interface: Streamlit
-  Database: SQLite (if required)
-  Version Control: Git & GitHub
-## 5. Plan of Action
+The main objectives of this research are:
 
-1. Conduct literature survey and study the base paper.
-2. Collect and analyze suitable plagiarism/paraphrase datasets.
-3. Preprocess and prepare the data.
-4. Implement baseline plagiarism detection methods.
-5. Implement SBERT-based semantic similarity.
-6. Develop plagiarism detection and explainability modules.
-7. Build the user interface.
-8. Test and evaluate the system using Accuracy, Precision, Recall and F1-score.
-9. Compare the proposed approach with baseline methods.
-10. Document and deploy the final system.
+- To detect both lexical and semantically similar content.
+- To identify potentially plagiarized passages from uploaded documents.
+- To retrieve potentially relevant sources from the Internet.
+- To compare lexical and semantic similarity using complementary methods.
+- To investigate different strategies for combining similarity signals.
+- To evaluate the effect of web-source retrieval quality on plagiarism detection.
+- To provide source-grounded and understandable explanations for detected passages.
+- To evaluate robustness across different levels of paraphrasing.
 
-## 6. Expected Outcome
+---
 
-The project aims to develop a system capable of detecting **paraphrased and semantic plagiarism** while providing **evidence and explanations** for its detection results.
+## 🔬 Research Question
 
+**Can combining lexical similarity and semantic similarity with Internet-source retrieval improve the detection of paraphrased plagiarism while providing understandable, source-grounded evidence?**
+
+---
+
+## 🧠 Proposed Methodology
+
+The proposed system follows the pipeline:
+
+```text
+PDF / DOCX Document
+        ↓
+Text Extraction
+        ↓
+Text Cleaning & Sentence Segmentation
+        ↓
+Passage Construction
+        ↓
+Internet Source Retrieval
+        ↓
+Webpage Text Extraction
+        ↓
+TF-IDF Similarity ─────┐
+                       ├──→ Evidence Fusion
+SBERT Similarity ──────┘
+                       ↓
+Potential Plagiarism Decision
+                       ↓
+Source-Grounded Explanation
