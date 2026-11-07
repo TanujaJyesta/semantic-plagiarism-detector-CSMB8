@@ -1,0 +1,6 @@
+Pair Type,TF-IDF,MiniLM,MPNet
+Exact match,1.0,1.0,1.0
+Paraphrased,0.302,0.8341,0.9178
+Reworded,0.4787,0.8033,0.7981
+Unrelated,0.0,0.0919,0.0636
+Hard negative,0.6212,0.7248,0.6134

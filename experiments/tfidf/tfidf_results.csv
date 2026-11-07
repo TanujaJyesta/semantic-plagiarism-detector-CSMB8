@@ -1,0 +1,6 @@
+Pair Type,Sentence 1,Sentence 2,TF-IDF Score
+Exact match,The students submitted their assignments before the deadline.,The students submitted their assignments before the deadline.,1.0
+Paraphrased,Climate change increases the Earth's average temperature.,Global warming raises the average temperature of the planet.,0.302
+Reworded,Machine learning helps computers learn patterns from data.,Computers can identify patterns in data using machine learning techniques.,0.4787
+Unrelated,The university library contains thousands of research books.,Photosynthesis allows plants to convert sunlight into energy.,0.0
+Hard negative,The treatment improved the patients' condition.,The treatment did not improve the patients' condition.,0.6212

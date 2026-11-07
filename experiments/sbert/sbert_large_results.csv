@@ -1,0 +1,6 @@
+Pair Type,MPNet Score
+Exact match,1.0
+Paraphrased,0.9178
+Reworded,0.7981
+Unrelated,0.0636
+Hard negative,0.6134

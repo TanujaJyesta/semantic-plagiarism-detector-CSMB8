@@ -1,0 +1,28 @@
+# Evaluation Metrics – Preliminary Results
+
+## Objective
+Evaluate TF-IDF, MiniLM and MPNet using classification metrics.
+
+## Demonstration threshold
+0.75
+
+## Results
+
+| Metric | TF-IDF | MiniLM | MPNet |
+|---|---:|---:|---:|
+| Precision | 1.0000 | 1.0000 | 1.0000 |
+| Recall | 0.3333 | 1.0000 | 1.0000 |
+| F1-score | 0.5000 | 1.0000 | 1.0000 |
+| Accuracy | 0.6000 | 1.0000 | 1.0000 |
+
+## Observations
+1. TF-IDF missed two positive examples.
+2. MiniLM and MPNet correctly classified all five examples at the demonstration threshold.
+3. The results are based on a very small illustrative dataset.
+4. Further testing on a larger labelled dataset is required.
+
+## PAN PlagDet
+The formula was implemented and tested using illustrative values. Actual PAN PlagDet evaluation requires plagiarism-span detection and granularity.
+
+## Conclusion
+Semantic models showed promising preliminary classification performance. A larger independent evaluation dataset and validation-based threshold selection are required before drawing final conclusions.

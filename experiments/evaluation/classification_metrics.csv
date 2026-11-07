@@ -1,0 +1,4 @@
+Model,Threshold,Precision,Recall,F1,Accuracy,TP,FP,FN,TN
+TF-IDF,0.75,1.0,0.3333333333333333,0.5,0.6,1,0,2,2
+MiniLM,0.75,1.0,1.0,1.0,1.0,3,0,0,2
+MPNet,0.75,1.0,1.0,1.0,1.0,3,0,0,2

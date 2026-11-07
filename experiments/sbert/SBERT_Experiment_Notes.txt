@@ -1,0 +1,26 @@
+# SBERT Experiment – Preliminary Results
+
+**Objective:** To evaluate semantic similarity between different sentence pairs using SBERT.
+
+**Model:** sentence-transformers/all-MiniLM-L6-v2
+
+**Implementation:** Python, Sentence Transformers and cosine similarity.
+
+**Results:**
+
+| Pair Type | SBERT Score |
+|---|---:|
+| Exact match | 1.0000 |
+| Paraphrased | 0.8341 |
+| Reworded | 0.8033 |
+| Unrelated | 0.0919 |
+| Hard negative | 0.7248 |
+
+**Observations:**
+1. SBERT achieved a high score for paraphrased and reworded sentences.
+2. It assigned a low score to unrelated sentences.
+3. Contradictory sentences still received a relatively high similarity score.
+
+**Conclusion:** SBERT captures semantic relationships better than TF-IDF in these preliminary examples. However, semantic similarity alone cannot reliably distinguish contradictory statements.
+
+**Status:** Preliminary experiment completed. Further evaluation on a larger dataset is required.
